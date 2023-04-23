@@ -8,12 +8,13 @@ import Business.EcoSystem;
 import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class ManageNetworkJPanel extends javax.swing.JPanel {
 
@@ -138,10 +139,23 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
 
         String name = nameJTextField.getText();
 
+//        Network network = system.createAndAddNetwork();
+//        network.setName(name);
+//        populateNetworkTable();
+        
+        
+        if (nameJTextField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill all the fields!");
+        } else {
+            //write data into object 
         Network network = system.createAndAddNetwork();
         network.setName(name);
-
         populateNetworkTable();
+
+        }
+        
+        
+        
     }//GEN-LAST:event_submitJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
