@@ -168,7 +168,7 @@ public class MainJFrame extends javax.swing.JFrame {
         container.setBackground(new java.awt.Color(255, 255, 255));
         container.setLayout(new java.awt.CardLayout());
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Desktop\\AED-Final-Project-main\\Skyline-New-York.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Business/userinterface/Skyline-New-York.jpg"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(800, 800));
         jLabel5.setMinimumSize(new java.awt.Dimension(800, 800));
 
