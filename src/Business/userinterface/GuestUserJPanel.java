@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Business.userinterface;
-
 import Business.EcoSystem;
 import Business.UserAccount.UserAccountDirectory;
 import Business.Citizen.CitizenDirectory;

@@ -12,7 +12,7 @@ import Business.userinterface.PermHousing.AddListingJPanel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class HouseListingDirectory {
 

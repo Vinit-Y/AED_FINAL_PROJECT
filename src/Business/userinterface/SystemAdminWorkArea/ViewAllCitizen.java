@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class ViewAllCitizen extends javax.swing.JPanel {
    private JPanel userProcessContainer;
@@ -71,7 +71,6 @@ public class ViewAllCitizen extends javax.swing.JPanel {
         tblViewAllCitizens = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(102, 102, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,16 +104,6 @@ public class ViewAllCitizen extends javax.swing.JPanel {
             }
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, 140, 30));
-
-        backJButton.setBackground(new java.awt.Color(204, 204, 255));
-        backJButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
-        backJButton.setText("<< BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
      
@@ -164,16 +153,8 @@ test.pack();
        
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;

@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author 91983
+ * @author HP
  */
 public class PermHousingRequest extends WorkRequest{
    int listingId;

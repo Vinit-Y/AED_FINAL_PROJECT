@@ -7,7 +7,7 @@ package Business.Listings;
 
 /**
  *
- *@author 91887
+ *@author Vinit
  */
 public class HouseListing {
     int listingId;
