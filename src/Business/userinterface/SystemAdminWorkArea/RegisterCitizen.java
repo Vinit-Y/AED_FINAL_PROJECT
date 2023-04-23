@@ -265,14 +265,19 @@ public class RegisterCitizen extends javax.swing.JPanel {
         }
         
         if (txt_CoordX.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, " Last Name can't be empty");
+            JOptionPane.showMessageDialog(null, "X co-ordinate cannot be empty");
             return;
         }
         
+        
         if (txt_CoordY.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, " Last Name can't be empty");
+            JOptionPane.showMessageDialog(null, "Y co-ordinate cannot be empty");
             return;
         }
+        
+        
+        
+        
         
         
         
