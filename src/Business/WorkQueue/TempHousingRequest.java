@@ -7,7 +7,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author 91983
+ * @author HP
  */
 public class TempHousingRequest extends WorkRequest {
     String HousingSociety;

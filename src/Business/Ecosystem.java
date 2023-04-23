@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Business;
-
 import Business.Listings.HouseListingDirectory;
 import Business.Listings.TempHouseListingDirectory;
 import Business.Network.Network;

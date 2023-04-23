@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class RegisterCitizen extends javax.swing.JPanel {
 
@@ -96,7 +96,6 @@ public class RegisterCitizen extends javax.swing.JPanel {
         jLabel20 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jComboBox1 = new javax.swing.JComboBox<>();
-        backJButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setForeground(new java.awt.Color(255, 255, 255));
@@ -234,16 +233,6 @@ public class RegisterCitizen extends javax.swing.JPanel {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Prefer not to Answer" }));
         add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 220, -1));
-
-        backJButton.setBackground(new java.awt.Color(102, 102, 255));
-        backJButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
-        backJButton.setText("<< BACK");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
-            }
-        });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 630, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEducationDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEducationDetailsActionPerformed
@@ -274,6 +263,25 @@ public class RegisterCitizen extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, " Password can't be empty");
             return;
         }
+        
+        if (txt_CoordX.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "X co-ordinate cannot be empty");
+            return;
+        }
+        
+        
+        if (txt_CoordY.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Y co-ordinate cannot be empty");
+            return;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         try {
             if (!txtAge.getText().equals("")) {
                 Integer.parseInt(txtAge.getText());
@@ -317,7 +325,6 @@ public class RegisterCitizen extends javax.swing.JPanel {
         v.setCoordX(txt_CoordX.getText());
         v.setCoordY(txt_CoordY.getText());
         System.out.println("Registered Citizen succesfully");
-        JOptionPane.showMessageDialog(null, "Registered Citizen succesfully");
         txtFirstName.setText("");
         txtLastName.setText("");
         txtAge.setText("");
@@ -352,16 +359,8 @@ public class RegisterCitizen extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel10;

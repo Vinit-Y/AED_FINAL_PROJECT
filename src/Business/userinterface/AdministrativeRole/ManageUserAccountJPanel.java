@@ -10,6 +10,7 @@ import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
@@ -214,7 +215,22 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         nameJTextField.setText("");
         jPasswordField1.setText("");
 
-        popData();
+        //popData();
+        
+        
+        
+        if (nameJTextField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill all the fields!");
+        } else {
+            //write data into object 
+//            this.business.getJobDirectory().createJobPost(employer, title, description, salary, Integer.valueOf(experience));
+            JOptionPane.showMessageDialog(null, "User account created");
+            popData();
+
+        }
+        
+        
+        
     }//GEN-LAST:event_createUserJButtonActionPerformed
 
     private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed
