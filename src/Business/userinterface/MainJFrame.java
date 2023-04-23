@@ -104,6 +104,8 @@ public class MainJFrame extends javax.swing.JFrame {
         homePic1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,20 +120,20 @@ public class MainJFrame extends javax.swing.JFrame {
                 loginJButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(loginJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 120, -1));
-        jPanel1.add(userNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 124, -1));
-        jPanel1.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 124, -1));
+        jPanel1.add(loginJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 120, -1));
+        jPanel1.add(userNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 124, -1));
+        jPanel1.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 124, -1));
 
-        jLabel1.setFont(new java.awt.Font("Poppins", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel1.setText("USERNAME:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Poppins", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel2.setText("LOGIN AS GUEST");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 130, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 170, -1));
         jPanel1.add(loginJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 253, -1, -1));
 
-        logoutJButton.setBackground(new java.awt.Color(20, 53, 94));
+        logoutJButton.setBackground(new java.awt.Color(204, 204, 255));
         logoutJButton.setFont(new java.awt.Font("Poppins", 1, 14)); // NOI18N
         logoutJButton.setText("LOGOUT");
         logoutJButton.setEnabled(false);
@@ -140,7 +142,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 logoutJButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(logoutJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 120, -1));
+        jPanel1.add(logoutJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 120, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Poppins", 1, 14)); // NOI18N
@@ -150,22 +152,40 @@ public class MainJFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 130, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 470, 130, -1));
 
-        homePic.setFont(new java.awt.Font("Poppins", 3, 24)); // NOI18N
+        homePic.setFont(new java.awt.Font("Poppins", 3, 36)); // NOI18N
         homePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        homePic.setText("***SMART CITY MANAGEMENT***");
+        homePic.setText("CITY MANAGEMENT");
         jPanel1.add(homePic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 420, 30));
         jPanel1.add(homePic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 80, 70));
 
-        jLabel3.setFont(new java.awt.Font("Poppins", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
         jLabel3.setText("PASSWORD:");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
 
         jSplitPane1.setLeftComponent(jPanel1);
 
         container.setBackground(new java.awt.Color(255, 255, 255));
         container.setLayout(new java.awt.CardLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Desktop\\AED-Final-Project-main\\Skyline-New-York.jpg")); // NOI18N
+        jLabel5.setMaximumSize(new java.awt.Dimension(800, 800));
+        jLabel5.setMinimumSize(new java.awt.Dimension(800, 800));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
+        );
+
+        container.add(jPanel2, "card2");
+
         jSplitPane1.setRightComponent(container);
 
         getContentPane().add(jSplitPane1, java.awt.BorderLayout.CENTER);
@@ -310,7 +330,9 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton loginJButton;
     private javax.swing.JLabel loginJLabel;
