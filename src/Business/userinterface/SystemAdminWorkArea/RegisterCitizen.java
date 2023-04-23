@@ -263,6 +263,20 @@ public class RegisterCitizen extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, " Password can't be empty");
             return;
         }
+        
+        if (txt_CoordX.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, " Last Name can't be empty");
+            return;
+        }
+        
+        if (txt_CoordY.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, " Last Name can't be empty");
+            return;
+        }
+        
+        
+        
+        
         try {
             if (!txtAge.getText().equals("")) {
                 Integer.parseInt(txtAge.getText());
