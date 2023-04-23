@@ -226,7 +226,7 @@
                 <Component class="javax.swing.JLabel" name="jLabel5">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Users\HP\Desktop\AED-Final-Project-main\Skyline-New-York.jpg"/>
+                      <Image iconType="3" name="/Business/userinterface/Skyline-New-York.jpg"/>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[800, 800]"/>
