@@ -55,4 +55,14 @@ public class UserAccountDirectory {
         }
         return true;
     }
+    public Boolean accountExists(String username){
+        for(UserAccount u: this.userAccountList){
+            if(u.getUsername().equals(username)){
+                   return true;
+               }
+        }
+        return false;
+
+    }
 }
+//&& u.getPassword().equals(password)

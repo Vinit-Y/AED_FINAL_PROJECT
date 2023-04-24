@@ -62,6 +62,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         backJButton = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        DeleteNetBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(102, 102, 255));
         setForeground(new java.awt.Color(255, 255, 255));
@@ -133,6 +134,15 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setText("Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, 30));
+
+        DeleteNetBtn.setBackground(new java.awt.Color(204, 204, 255));
+        DeleteNetBtn.setText("Delete Network");
+        DeleteNetBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteNetBtnActionPerformed(evt);
+            }
+        });
+        add(DeleteNetBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
@@ -151,6 +161,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         Network network = system.createAndAddNetwork();
         network.setName(name);
         populateNetworkTable();
+        JOptionPane.showMessageDialog(null, "Enterprise Created!");
 
         }
         
@@ -168,7 +179,30 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
+    private void DeleteNetBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteNetBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = networkJTable.getSelectedRow();
+
+        if(selectedRow >= 0) {
+
+            // we will delete the object
+
+            Network br = (Network) networkJTable.getValueAt(selectedRow, 0);
+          
+            this.system.removeNetwork(br.getName());
+            JOptionPane.showMessageDialog(null, "Deleted!");
+            populateNetworkTable();
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Please select a row!");
+        }
+        
+
+
+    }//GEN-LAST:event_DeleteNetBtnActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DeleteNetBtn;
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -358,6 +358,7 @@ public class PermHousingWorkAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("AddListingJPanel", new AddListingJPanel(userProcessContainer, userAccount,permHousingOrganization,enterprise, vd, business));
         layout.next(userProcessContainer);
+        
     }//GEN-LAST:event_addpermhousingjButtonActionPerformed
 
     private void btnViewAllCitizenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAllCitizenActionPerformed
