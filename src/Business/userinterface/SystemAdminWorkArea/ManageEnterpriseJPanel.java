@@ -177,6 +177,7 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         } else {
             //write data into object 
             Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
+            JOptionPane.showMessageDialog(null, "Enterprise Created!");
         populateTable();
         }
         

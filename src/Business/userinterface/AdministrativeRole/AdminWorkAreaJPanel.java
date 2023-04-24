@@ -45,6 +45,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         valueLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(102, 102, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -95,6 +96,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel8.setText("ADMIN WORK AREA");
         jLabel8.setFocusable(false);
         add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 580, 500));
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
@@ -127,6 +129,7 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JButton manageEmployeeJButton;

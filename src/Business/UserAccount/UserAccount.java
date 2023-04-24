@@ -5,6 +5,7 @@
 package Business.UserAccount;
 
 import Business.Employee.Employee;
+import Business.Network.Network;
 import Business.Role.Role;
 import Business.WorkQueue.WorkQueue;
 
@@ -19,6 +20,7 @@ public class UserAccount {
     private Employee employee;
     private Role role;
     private WorkQueue workQueue;
+    private Network network;
 
     public UserAccount() {
         workQueue = new WorkQueue();
@@ -61,13 +63,19 @@ public class UserAccount {
         return workQueue;
     }
 
-    
+    public Network getNetwork() {
+        return network;
+    }
+
+    public void setNetwork(Network network) {
+        this.network = network;
+    }
+
     
     @Override
     public String toString() {
         return username;
     }
-    
     
     
 }

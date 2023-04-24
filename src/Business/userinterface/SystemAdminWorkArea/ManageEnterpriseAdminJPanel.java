@@ -214,10 +214,16 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
 if (usernameJTextField.getText().isEmpty() || nameJTextField.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please fill all the fields!");
-        } else {
+        } 
+else if(enterprise.getUserAccountDirectory().accountExists(usernameJTextField.getText())){
+                    JOptionPane.showMessageDialog(null,"Sorry credentials are taken");
+                }
+
+else {
             //write data into object 
             Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+         JOptionPane.showMessageDialog(null, "Enterprise Admin Created!");
         populateTable();
         }
         

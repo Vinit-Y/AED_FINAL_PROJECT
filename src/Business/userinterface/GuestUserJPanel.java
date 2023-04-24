@@ -57,7 +57,6 @@ CitizenDirectory Citizen_Di;
 
         jLabel1 = new javax.swing.JLabel();
         btnRegisterCitizen = new javax.swing.JButton();
-        btnViewAllCitizen = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(102, 102, 255));
 
@@ -73,28 +72,18 @@ CitizenDirectory Citizen_Di;
             }
         });
 
-        btnViewAllCitizen.setBackground(new java.awt.Color(204, 204, 255));
-        btnViewAllCitizen.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnViewAllCitizen.setText("VIEW AND TRACK CITIZEN");
-        btnViewAllCitizen.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewAllCitizenActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(116, 116, 116)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(1, 1, 1)
-                            .addComponent(btnRegisterCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(btnViewAllCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(btnRegisterCitizen, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(jLabel1)))
                 .addContainerGap(144, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -104,9 +93,7 @@ CitizenDirectory Citizen_Di;
                 .addComponent(jLabel1)
                 .addGap(92, 92, 92)
                 .addComponent(btnRegisterCitizen)
-                .addGap(23, 23, 23)
-                .addComponent(btnViewAllCitizen)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -118,18 +105,9 @@ CitizenDirectory Citizen_Di;
         layout.next(container);
     }//GEN-LAST:event_btnRegisterCitizenActionPerformed
 
-    private void btnViewAllCitizenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewAllCitizenActionPerformed
-        // TODO add your handling code here:
-        ViewAllCitizen rg = new ViewAllCitizen(container, system, Citizen_Di);
-        container.add("ViewAllCitizen", rg);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
-    }//GEN-LAST:event_btnViewAllCitizenActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegisterCitizen;
-    private javax.swing.JButton btnViewAllCitizen;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

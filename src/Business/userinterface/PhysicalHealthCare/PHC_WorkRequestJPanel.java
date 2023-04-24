@@ -397,8 +397,8 @@ public class PHC_WorkRequestJPanel extends javax.swing.JPanel {
         
              String to = String.valueOf(request.getSender().getUsername());
              String subject = "Report for the PHC request raised : "+ request.getMain_Concern();
-             String user = "tkshitij2001@gmail.com";
-             String pass = "bypmbzuapfkdgcor";   
+             String user = "vinityadav566@gmail.com";
+             String pass = "ntyrgkptgzbpgios";   
              String message = " Hello "+ CitizenName 
                          + "Please Look into the report provide by your dcotor for your PHC request concern: " + ((PhysicalHealthCareRequest) request).getMain_Concern()
                          + " Doctor Name: "+  request.getReceiver() + "  \n"+ 
@@ -520,8 +520,8 @@ public class PHC_WorkRequestJPanel extends javax.swing.JPanel {
             String to = txt_EmailID.getText();
           
             String subject = "Request for citizen Rehab : " +lbl_patientName.getText() ;
-            String user = "tkshitij2001@gmail.com";
-             String pass = "bypmbzuapfkdgcor";  
+            String user = "vinityadav566@gmail.com";
+             String pass = "ntyrgkptgzbpgios";  
 
             SendMail.send(to,subject, message, user, pass);
          

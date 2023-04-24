@@ -98,10 +98,10 @@ public class ProcessWorkRequestJPanel2 extends javax.swing.JPanel {
         btnRecommendForJob = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(102, 102, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rejectJButton.setBackground(new java.awt.Color(204, 204, 255));
+        rejectJButton.setBackground(new java.awt.Color(102, 102, 255));
         rejectJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         rejectJButton.setText("REJECT");
         rejectJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class ProcessWorkRequestJPanel2 extends javax.swing.JPanel {
         });
         add(rejectJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 263, 155, -1));
 
-        submitJButton.setBackground(new java.awt.Color(204, 204, 255));
+        submitJButton.setBackground(new java.awt.Color(102, 102, 255));
         submitJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         submitJButton.setText("ACCEPT");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +121,7 @@ public class ProcessWorkRequestJPanel2 extends javax.swing.JPanel {
         });
         add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 263, 146, -1));
 
-        backJButton.setBackground(new java.awt.Color(204, 204, 255));
+        backJButton.setBackground(new java.awt.Color(102, 102, 255));
         backJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         backJButton.setText("<<BACK");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +167,7 @@ public class ProcessWorkRequestJPanel2 extends javax.swing.JPanel {
         txtAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(427, 209, 190, 23));
 
-        btnComplete.setBackground(new java.awt.Color(204, 204, 255));
+        btnComplete.setBackground(new java.awt.Color(102, 102, 255));
         btnComplete.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnComplete.setText("COMPLETE");
         btnComplete.addActionListener(new java.awt.event.ActionListener() {
@@ -177,7 +177,7 @@ public class ProcessWorkRequestJPanel2 extends javax.swing.JPanel {
         });
         add(btnComplete, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 313, 146, -1));
 
-        btnRecommendForJob.setBackground(new java.awt.Color(204, 204, 255));
+        btnRecommendForJob.setBackground(new java.awt.Color(102, 102, 255));
         btnRecommendForJob.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnRecommendForJob.setText("RECOMMEND FOR JOB ");
         btnRecommendForJob.addActionListener(new java.awt.event.ActionListener() {
@@ -292,9 +292,9 @@ public class ProcessWorkRequestJPanel2 extends javax.swing.JPanel {
             System.out.println("Added Reqyesr to Org ");
             account.getWorkQueue().getWorkRequestList().add(jrequest);
             System.out.println("Added Reqyesr to UserAccount ");
-            String user = "tkshitij2001@gmail.com";
-             String pass = "bypmbzuapfkdgcor";  
-            String to = "tkshitij2001@gmail.com";
+            String user = "vinityadav566@gmail.com";
+             String pass = "ntyrgkptgzbpgios";  
+            String to = "vinityadav566@gmail.com";
             String subject = "Request for Citizen job";
             JOptionPane.showMessageDialog(null, "Candidate: " + request.getSender().getUsername() + "Job Recommendation Sent to Admin!", "Information", JOptionPane.INFORMATION_MESSAGE);
             btnRecommendForJob.setEnabled(false);
