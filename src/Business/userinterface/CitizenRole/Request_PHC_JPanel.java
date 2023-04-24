@@ -272,10 +272,10 @@ public class Request_PHC_JPanel extends javax.swing.JPanel {
             userAccount.getWorkQueue().getWorkRequestList().add(request);
             System.out.println("Added Reqyesr to UserAccount ");
 
-            String to ="tkshitij2001@gmail.com";
+            String to ="vinityadav566@gmail.com";
             String subject = "Request from Citizen for PHC : with following details : " + String.valueOf(c_lSymptoms.getSelectedItem()) +"  and concern : "+  txt_mainConcern.getText();
-            String user = "tkshitij2001@gmail.com";
-            String pass = "bypmbzuapfkdgcor";
+            String user = "vinityadav566@gmail.com";
+            String pass = "ntyrgkptgzbpgios";
 
             SendMail.send(to,subject, message, user, pass);
             //            dB4OUtil.storeSystem(system);

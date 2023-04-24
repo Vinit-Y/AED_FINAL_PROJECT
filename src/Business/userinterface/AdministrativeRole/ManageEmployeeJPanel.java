@@ -176,12 +176,13 @@ public class ManageEmployeeJPanel extends javax.swing.JPanel {
         
 //        organization.getEmployeeDirectory().createEmployee(name);
 //        populateTable(organization);
-        nameJTextField.setText("");
+        //nameJTextField.setText("");
         
         
         if (nameJTextField.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please fill all the fields!");
-        } else {
+        } 
+        else {
             //write data into object 
              organization.getEmployeeDirectory().createEmployee(name);
         populateTable(organization);

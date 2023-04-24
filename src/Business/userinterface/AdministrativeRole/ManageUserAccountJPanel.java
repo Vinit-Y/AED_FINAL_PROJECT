@@ -187,7 +187,7 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         jLabel4.setText("ROLE");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, -1, -1));
 
-        roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Organization Admin", " " }));
         add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 170, -1));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 390, 390, -1));
 
@@ -207,7 +207,18 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         String password = String.valueOf(passwordCharArray);
         
      
-        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
+      
+        
+        
+        
+        if (nameJTextField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill all the fields!");
+        } 
+        else if(this.enterprise.getUserAccountDirectory().accountExists(nameJTextField.getText())){
+                    JOptionPane.showMessageDialog(null,"Sorry credentials are taken");
+                }
+            else {
+              Organization organization = (Organization) organizationJComboBox.getSelectedItem();
         Employee employee = (Employee) employeeJComboBox.getSelectedItem();
         Role role = (Role) roleJComboBox.getSelectedItem();
 
@@ -216,12 +227,6 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         jPasswordField1.setText("");
 
         //popData();
-        
-        
-        
-        if (nameJTextField.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Please fill all the fields!");
-        } else {
             //write data into object 
 //            this.business.getJobDirectory().createJobPost(employer, title, description, salary, Integer.valueOf(experience));
             JOptionPane.showMessageDialog(null, "User account created");

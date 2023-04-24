@@ -98,4 +98,14 @@ public class EcoSystem extends Organization{
         }
         return true;
     }
+    public void removeNetwork(String networkName) {
+         // find the insurance obj in the arraylist with this name
+         
+         for(Network ins : this.business.getNetworkList()) {
+             if( ins.getName().equals(networkName)){
+                 this.networkList.remove(ins);
+                 break;
+             }
+         }
+    }
 }
