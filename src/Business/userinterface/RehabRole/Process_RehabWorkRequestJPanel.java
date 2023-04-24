@@ -21,7 +21,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class Process_RehabWorkRequestJPanel extends javax.swing.JPanel {
    EcoSystem system;
@@ -198,8 +198,8 @@ if(!usernamePatternCorrect()){
         }
              String to = String.valueOf(txt_EmailID.getText());
              String subject = "Report for the Rehab : "+ ((RehabWorkRequest) request).getRehabConcern();
-             String user = "tkshitij2001@gmail.com";
-             String pass = "bypmbzuapfkdgcor";  
+             String user = "vinityadav566@gmail.com";
+             String pass = "ntyrgkptgzbpgios";  
              String message = " Hello "+ String.valueOf(request.getCitizenName())
                          + "Please Look into the report provide by your Rehab Employee : " + String.valueOf(((RehabWorkRequest) request).getRehabConcern())
                          + " Rehab Therapist Name: "+  request.getReceiver() + "  \n"+ 

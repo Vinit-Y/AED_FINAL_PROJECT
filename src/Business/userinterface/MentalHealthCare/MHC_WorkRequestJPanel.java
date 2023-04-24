@@ -27,7 +27,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class MHC_WorkRequestJPanel extends javax.swing.JPanel {
 
@@ -269,8 +269,8 @@ if(txtArea_analysis.getText().equals("")){
         
              String to = String.valueOf(request.getSender());
              String subject = "Report for the MHC request raised : "+ request.getMain_Concern();
-             String user = "tkshitij2001@gmail.com";
-             String pass = "bypmbzuapfkdgcor";   
+             String user = "vinityadav566@gmail.com";
+             String pass = "ntyrgkptgzbpgios";   
              String message = " Hello "+ CitizenName 
                          + "Please Look into the report provide by your dcotor for your MHC request concern: " + ((MentalHealthCareRequest) request).getMain_Concern()
                          + " Doctor Name: "+  request.getReceiver() + "  \n"+ 
@@ -362,8 +362,8 @@ if(!usernamePatternCorrect()){
         }
             String to = txt_EmailID.getText();
             String subject = "Request for citizen Rehab : " +lbl_patientName.getText() ;
-            String user = "tkshitij2001@gmail.com";
-            String pass = "kshitij@123";
+            String user = "vinityadav566@gmail.com";
+            String pass = "vinit@999";
 
             SendMail.send(to,subject, message, user, pass);
         txtArea_analysis.setText("");

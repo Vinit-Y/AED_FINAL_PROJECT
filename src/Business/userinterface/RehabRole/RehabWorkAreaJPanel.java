@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class RehabWorkAreaJPanel extends javax.swing.JPanel {
  private EcoSystem system;

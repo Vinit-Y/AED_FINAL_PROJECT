@@ -107,7 +107,7 @@ public class ProcessGradReqJPanel extends javax.swing.JPanel {
         rejectJButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(102, 102, 255));
+        setBackground(new java.awt.Color(204, 204, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtHeader.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
@@ -126,7 +126,7 @@ public class ProcessGradReqJPanel extends javax.swing.JPanel {
         txtAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         add(txtAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 190, 23));
 
-        btnBack.setBackground(new java.awt.Color(204, 204, 255));
+        btnBack.setBackground(new java.awt.Color(102, 102, 255));
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnBack.setText("BACK");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -172,7 +172,7 @@ public class ProcessGradReqJPanel extends javax.swing.JPanel {
         txtHS7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         add(txtHS7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 272, 26));
 
-        submitJButton.setBackground(new java.awt.Color(204, 204, 255));
+        submitJButton.setBackground(new java.awt.Color(102, 102, 255));
         submitJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         submitJButton.setText("ACCEPT");
         submitJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -182,7 +182,7 @@ public class ProcessGradReqJPanel extends javax.swing.JPanel {
         });
         add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 530, 120, -1));
 
-        rejectJButton.setBackground(new java.awt.Color(204, 204, 255));
+        rejectJButton.setBackground(new java.awt.Color(102, 102, 255));
         rejectJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         rejectJButton.setText("REJECT");
         rejectJButton.addActionListener(new java.awt.event.ActionListener() {

@@ -28,4 +28,14 @@ public class EmployeeDirectory {
         employeeList.add(employee);
         return employee;
     }
+    
+    public Boolean accountExists(String name){
+        for(Employee u: this.employeeList){
+            if(u.getName().equals(name)){
+                   return true;
+               }
+        }
+        return false;
+
+    }
 }

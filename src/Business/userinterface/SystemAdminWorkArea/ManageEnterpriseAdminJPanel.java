@@ -12,12 +12,13 @@ import Business.Role.AdminRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
@@ -203,10 +204,31 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         String password = String.valueOf(passwordJPasswordField.getPassword());
         String name = nameJTextField.getText();
         
-        Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
+//        Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
+//        UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+//        populateTable();
         
+        
+//         if (usernameJTextField.getText().isEmpty() || nameJTextField.getText().isEmpty() || passwordJPasswordField.getPassword().isEmpty()) {
+
+
+if (usernameJTextField.getText().isEmpty() || nameJTextField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill all the fields!");
+        } 
+else if(enterprise.getUserAccountDirectory().accountExists(usernameJTextField.getText())){
+                    JOptionPane.showMessageDialog(null,"Sorry credentials are taken");
+                }
+
+else {
+            //write data into object 
+            Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         UserAccount account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new AdminRole());
+         JOptionPane.showMessageDialog(null, "Enterprise Admin Created!");
         populateTable();
+        }
+        
+        
+        
         
     }//GEN-LAST:event_submitJButtonActionPerformed
 

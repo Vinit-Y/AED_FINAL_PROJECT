@@ -3,7 +3,6 @@
  * and open the template in the editor.
  */
 package Business.userinterface.DoctorRole;
-
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Organization.LabOrganization;
@@ -19,7 +18,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class RequestLabTestJPanel extends javax.swing.JPanel {
 

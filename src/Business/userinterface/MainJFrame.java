@@ -3,7 +3,6 @@
  * and open the template in the editor.
  */
 package Business.userinterface;
-
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
@@ -157,7 +156,7 @@ public class MainJFrame extends javax.swing.JFrame {
         homePic.setFont(new java.awt.Font("Poppins", 3, 36)); // NOI18N
         homePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         homePic.setText("CITY MANAGEMENT");
-        jPanel1.add(homePic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 420, 30));
+        jPanel1.add(homePic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 420, 30));
         jPanel1.add(homePic1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 80, 70));
 
         jLabel3.setFont(new java.awt.Font("Poppins", 1, 18)); // NOI18N
@@ -169,7 +168,7 @@ public class MainJFrame extends javax.swing.JFrame {
         container.setBackground(new java.awt.Color(255, 255, 255));
         container.setLayout(new java.awt.CardLayout());
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Desktop\\AED-Final-Project-main\\Skyline-New-York.jpg")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Business/userinterface/Skyline-New-York.jpg"))); // NOI18N
         jLabel5.setMaximumSize(new java.awt.Dimension(800, 800));
         jLabel5.setMinimumSize(new java.awt.Dimension(800, 800));
 
@@ -259,6 +258,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         loginJButton.setEnabled(false);
         logoutJButton.setEnabled(true);
+        jButton1.setEnabled(false);
         userNameJTextField.setEnabled(false);
         passwordField.setEnabled(false);
     }//GEN-LAST:event_loginJButtonActionPerformed
@@ -268,6 +268,7 @@ public class MainJFrame extends javax.swing.JFrame {
         userNameJTextField.setEnabled(true);
         passwordField.setEnabled(true);
         loginJButton.setEnabled(true);
+        jButton1.setEnabled(true);
 
         userNameJTextField.setText("");
         passwordField.setText("");

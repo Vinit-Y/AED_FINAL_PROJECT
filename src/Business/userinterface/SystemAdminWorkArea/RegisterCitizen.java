@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class RegisterCitizen extends javax.swing.JPanel {
 
@@ -149,14 +149,14 @@ public class RegisterCitizen extends javax.swing.JPanel {
         add(txtEducationDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 220, -1));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 255));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Register Citizen");
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton1.setText("REGISTER CITIZEN");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 630, 380, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 680, 380, -1));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel9.setText("SSN");
@@ -236,14 +236,14 @@ public class RegisterCitizen extends javax.swing.JPanel {
         add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 360, 220, -1));
 
         backJButton.setBackground(new java.awt.Color(102, 102, 255));
-        backJButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
-        backJButton.setText("<< BACK");
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        backJButton.setText("<<BACK");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 630, -1, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 680, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEducationDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEducationDetailsActionPerformed
@@ -274,6 +274,25 @@ public class RegisterCitizen extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, " Password can't be empty");
             return;
         }
+        
+        if (txt_CoordX.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "X co-ordinate cannot be empty");
+            return;
+        }
+        
+        
+        if (txt_CoordY.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Y co-ordinate cannot be empty");
+            return;
+        }
+        
+        else {
+        
+        
+        
+        
+        
+        
         try {
             if (!txtAge.getText().equals("")) {
                 Integer.parseInt(txtAge.getText());
@@ -298,7 +317,8 @@ public class RegisterCitizen extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, " Coord Y cannot be String");
             return;
         }
-
+        
+        
         Citizen v = system.getVd().addCitizen();
         system.getUad().createUserAccount(txtUsername.getText(), password);
         v.setFirstName(txtFirstName.getText());
@@ -317,7 +337,6 @@ public class RegisterCitizen extends javax.swing.JPanel {
         v.setCoordX(txt_CoordX.getText());
         v.setCoordY(txt_CoordY.getText());
         System.out.println("Registered Citizen succesfully");
-        JOptionPane.showMessageDialog(null, "Registered Citizen succesfully");
         txtFirstName.setText("");
         txtLastName.setText("");
         txtAge.setText("");
@@ -337,7 +356,8 @@ public class RegisterCitizen extends javax.swing.JPanel {
 
         txtUsername.setText("");
         jPasswordField1.setText("");
-
+                JOptionPane.showMessageDialog(null, "Citizen Registered!");
+                }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtCitizenIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCitizenIDActionPerformed
@@ -353,8 +373,12 @@ public class RegisterCitizen extends javax.swing.JPanel {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
         userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+        sysAdminwjp.populateTree();
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed

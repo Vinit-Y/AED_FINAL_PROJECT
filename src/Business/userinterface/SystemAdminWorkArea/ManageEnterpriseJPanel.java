@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class ManageEnterpriseJPanel extends javax.swing.JPanel {
 
@@ -167,11 +167,22 @@ public class ManageEnterpriseJPanel extends javax.swing.JPanel {
         }
 
         String name = nameJTextField.getText();
+//        Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
+//        populateTable();
 
-        Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
-
+        
+        
+        if (nameJTextField.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill all the fields!");
+        } else {
+            //write data into object 
+            Enterprise enterprise = network.getEnterpriseDirectory().createAndAddEnterprise(name, type);
+            JOptionPane.showMessageDialog(null, "Enterprise Created!");
         populateTable();
-
+        }
+        
+        
+        
     }//GEN-LAST:event_submitJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

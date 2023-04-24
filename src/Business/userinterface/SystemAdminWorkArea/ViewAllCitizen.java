@@ -9,6 +9,7 @@ import Business.EcoSystem;
 import Business.Citizen.Citizen;
 import javax.swing.table.DefaultTableModel;
 import Business.Citizen.CitizenDirectory;
+import Business.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.io.FileOutputStream;
@@ -23,7 +24,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 /**
  *
- * @author 91887
+ * @author Vinit
  */
 public class ViewAllCitizen extends javax.swing.JPanel {
    private JPanel userProcessContainer;
@@ -72,6 +73,7 @@ public class ViewAllCitizen extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
+        DelBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(102, 102, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +96,7 @@ public class ViewAllCitizen extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel6.setText("VIEW AND TRACK CITIZENS");
         jLabel6.setFocusable(false);
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 50, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 204, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -107,14 +109,24 @@ public class ViewAllCitizen extends javax.swing.JPanel {
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, 140, 30));
 
         backJButton.setBackground(new java.awt.Color(204, 204, 255));
-        backJButton.setFont(new java.awt.Font("Poppins", 1, 12)); // NOI18N
-        backJButton.setText("<< BACK");
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        backJButton.setText("<<BACK");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 120, 30));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 100, 30));
+
+        DelBtn.setBackground(new java.awt.Color(204, 204, 255));
+        DelBtn.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        DelBtn.setText("Delete Citizen");
+        DelBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DelBtnActionPerformed(evt);
+            }
+        });
+        add(DelBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
      
@@ -165,18 +177,49 @@ test.pack();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
         userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+        sysAdminwjp.populateTree();
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
+    private void DelBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DelBtnActionPerformed
+        // TODO add your handling code here:
+//         int selectedRow = tblViewAllCitizens.getSelectedRow();
+//
+//        if(selectedRow >= 0) {
+//
+//            // we will delete the object
+//
+//           Citizen br = (Citizen) tblViewAllCitizens.getValueAt(selectedRow, 0);
+//           
+//          
+//            this.system.removeNetwork(selectCitizen);
+//            JOptionPane.showMessageDialog(null, "Deleted!");
+//            populateCitizensDetails();
+//
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Please select a row!");
+//        }
+//        
+//
+//
+//        citizen v = system.getVd().addCitizen();
+//        system.getUad().createUserAccount(txtUsername.getText(), password);
+    }//GEN-LAST:event_DelBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DelBtn;
     private javax.swing.JButton backJButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblViewAllCitizens;
     // End of variables declaration//GEN-END:variables
+
 }

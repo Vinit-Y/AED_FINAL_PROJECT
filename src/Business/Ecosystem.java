@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Business;
-
 import Business.Listings.HouseListingDirectory;
 import Business.Listings.TempHouseListingDirectory;
 import Business.Network.Network;
@@ -98,5 +97,15 @@ public class EcoSystem extends Organization{
             
         }
         return true;
+    }
+    public void removeNetwork(String networkName) {
+         // find the insurance obj in the arraylist with this name
+         
+         for(Network ins : this.business.getNetworkList()) {
+             if( ins.getName().equals(networkName)){
+                 this.networkList.remove(ins);
+                 break;
+             }
+         }
     }
 }
